@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+<nav class="navbar navbar-expand-lg navbar-light grad">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -6,26 +6,29 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto d-flex align-items-center">
         <li class="nav-item active">
-            <img src="https://i.imgur.com/QBDoZ0z.jpeg" alt="imagem do user" height="50px" width="50px" class="img-fluid rounded-circle">
+            <img src="{{foto}}" alt="imagem do user" height="50px" width="50px" class="img-fluid rounded-circle ml">
         </li>
-        <li class="nav-item pl-3 ">
-          <p class="m-0 text-white font-weight-bold fs-16">Nome do Usuário</p>
+        <li class="nav-item pl-3">
+          <p class="m-0 text-white font-weight-bold fs-16">Olá, {{nome}}</p>
         </li>
 
-        <li class="nav-item pl-3 text-white">
-            <a href="">
+        <li class="nav-item pl-3 text-white ml">
+            <a href="#">
                 <p class="fas fa-edit  pl-3 m-0 pl-3"></p>
             </a>
-            
         </li>
-
+        <li>
+        <i class="fas fa-camera d-flex position-absolute top start-50 translate-middle
+         mt-2 fs-18 mb-4 align-items-center"></i>
+      </li>
       </ul>
-
-      <ul class="navbar-nav ml-auto d-flex">
-        <li class="nav-item pl-3 ">
-            <a class="m-0 text-white font-weight-bold fs-16">Sair <i class="fas fa-sign-out-alt"></i> </a>
-          </li>
-      </ul>
-
     </div>
+    
+    
+    
+    <a (click)='sair()'>
+      <button class="btn bs m-0 text-white  fs-16 font-weight-bold">
+        Sair <a class="fas fa-sign-out-alt font-weight-bold fs-16 btn"></a>
+        </button>
+      </a>
   </nav>

@@ -10,3 +10,25 @@
 .fas{
     color: white;
 }
+.bg{
+    background-color: #fbbc05;
+}
+.mr{
+    margin-right: 7pt;
+}
+.ml{
+    margin-left: 7pt;
+}
+.fs-none{
+    font-style: none;
+}
+.tx-c{
+    text-align: center;
+}
+.grad {
+    background-image: linear-gradient(to bottom left, rgb(211, 80, 80), black);
+  }
+  .bs{
+      border-style: solid;
+  }
+  

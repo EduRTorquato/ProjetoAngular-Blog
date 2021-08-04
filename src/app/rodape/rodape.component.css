@@ -23,3 +23,6 @@ ul.social-network li{
 .fa-twitter:hover{
     color: #1da1f2;
 }
+.grad-l {
+    background-image: linear-gradient(to top left, rgb(211, 80, 80), black);
+  }

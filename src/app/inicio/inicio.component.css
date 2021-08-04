@@ -1,0 +1,16 @@
+
+.mt-3{
+    margin-top: 3pt;
+}
+.mb-5{
+    margin-bottom: 5pt;
+}
+.mr-2{
+    margin-right: 2pt;
+}
+.fw-b{
+    font-weight:bold;
+}
+.grad {
+    background-image: linear-gradient(to bottom right, black, rgb(211, 80, 80));
+  }

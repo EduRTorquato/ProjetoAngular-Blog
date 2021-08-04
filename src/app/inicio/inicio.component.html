@@ -1,1 +1,117 @@
-<p>inicio works!</p>
+<div class="container-fluid">
+    <div class="row grad align-items-center">
+        <div class="col-md-6">
+            
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6  text-white">
+                    <h1 class="fs-54">Seja bem vindo(a)</h1>
+                    <h5 class="fs-18">Aproveite um pouco do meu trabalho!</h5>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center mt-3 mb-5">
+                <div class="col-md-6">
+                    <button class="btn btn-light mr-2" data-bs-toggle="modal" data-bs-target="#novaPostagem">NOVA POSTAGEM</button>
+                    <a class="btn btn-outline-light" href="#postagens">VER POSTAGENS</a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-6 d-flex">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner mb-5">
+                <div class="carousel-item active rounded">
+                  <img src="https://i.imgur.com/CY0m81H.jpeg" height="400px" width="550px" alt="TALKING">
+                </div>
+                <div class="carousel-item">
+                  <img  src="https://i.imgur.com/VUbnZgP.jpeg" height="400px" width="550px" alt="TALKING">
+                </div>
+                <div class="carousel-item">
+                  <img  src="https://i.imgur.com/pDxJcte.jpeg" height="400px" width="250px" alt="TALKING">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- menu -->
+<div class="container-fluid d-flex justify-content-center" id="postagens">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active text-secondary fw-b" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#todasPostagens" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Todas as postagens</button>
+
+          <button class="nav-link text-secondary fw-b" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#minhasPostagens" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Minhas postagens</button>
+
+          <button class="nav-link text-secondary fw-b" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#postagemTema" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Postagens por tema</button>
+        </div>
+      </nav>
+
+      <div class="tab-content mb-5 mt-5 text-center" id="nav-tabContent">
+        
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">Todas as Postagens</div>
+          <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">Minhas Postagens</div>
+          <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">Postagens por tema</div>
+        </div>
+
+      </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+        <button type="button" class="close" data-bs-dismiss="" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input type="text" class="form-control" id="titulo" placeholder="Digite o título">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Escolha um tema ou  <a href="">cadastre um novo</a>: </label>
+          <select name="tema" id="tema" class="form-control">
+            <option value="">Temas</option>
+          </select>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success">Postar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
