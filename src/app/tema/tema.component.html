@@ -14,12 +14,12 @@
             <div class="row d-flex justify-content-center mb-4 mt-5">
                 <div class="col-md-3">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="descricao" placeholder="Digite a descricao do tema">
+                        <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Digite a descricao do tema">
                     </div>
 
                     <div class=" mt-2 d-flex justify-content-center">
 
-                        <button class="btn btn-light">CADASTRAR</button>
+                        <button class="btn btn-light"(click)='cadastrar()'>CADASTRAR</button>
 
                     </div>
 
@@ -44,28 +44,21 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Primeiro</th>
-      <th scope="col">Último</th>
-      <th scope="col">Nickname</th>
+      <th scope="col text-right">Modificações</th>
+
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+    <tr *ngFor='let tema of listaTemas'>
+      <th >{{tema.id}}</th>
+      <td>{{tema.descricao}}</td>
+      <td d-flex justify-content-center>
+        <button class="btn btn-info mr-3" [routerLink]="['/tema-edit', tema.id]">Editar</button>
+        <button class="btn btn-danger" [routerLink]="['/tema-delete', tema.id]">Apagar</button>
+      </td>
+  
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+  
   </tbody>
 </table>
 

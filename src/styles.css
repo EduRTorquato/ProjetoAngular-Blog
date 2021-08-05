@@ -8,3 +8,6 @@
 .grad {
     background-image: linear-gradient(to bottom left, rgb(211, 80, 80), black);
   }
+  .mr-3{
+      margin-right: 3pt;
+  }

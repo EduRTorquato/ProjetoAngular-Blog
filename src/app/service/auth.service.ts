@@ -27,8 +27,5 @@ export class AuthService {
       ok = true
     }
       return ok
-    
-
-   
   }
 }
