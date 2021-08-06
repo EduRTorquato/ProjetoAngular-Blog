@@ -11,7 +11,8 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class TemaDeleteComponent implements OnInit {
   
-  tema: Tema = new Tema()
+  tema:Tema = new Tema()
+
   idTema: number
 
   constructor(
@@ -25,12 +26,14 @@ export class TemaDeleteComponent implements OnInit {
     if(environment.token ==''){
       this.router.navigate(['/entrar'])
      }
-     this.idTema = this.route.snapshot.params['/id']
+     this.idTema = this.route.snapshot.params['id']
+     this.findByIdTema(this.idTema)
     }
         
     
     findByIdTema(id: number){
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema)=>{
+        console.log('oi')
           this.tema = resp
        })
      }
