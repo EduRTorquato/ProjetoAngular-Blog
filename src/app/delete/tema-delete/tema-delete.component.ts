@@ -33,8 +33,8 @@ export class TemaDeleteComponent implements OnInit {
     
     findByIdTema(id: number){
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema)=>{
-        console.log('oi')
-          this.tema = resp
+          
+          resp = this.tema 
        })
      }
 
